@@ -30,13 +30,14 @@ class AuthController extends AppController
             if (!$response) {
                 $this->Flash->error('Bad request!');
             }
+            $response = json_decode($response, true);
             $this->log(json_encode($response));
 
             if (!empty($response['errorCode'])) {
                 $this->Flash->error($response['details']);
+                return $this->redirect('/auth');
             }
 
-            $response = json_decode($response, true);
             $this->set([
                 'orderRef' => $response['orderRef']
             ]);
