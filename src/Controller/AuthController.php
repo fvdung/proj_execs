@@ -97,7 +97,7 @@ class AuthController extends AppController
      * @param string $personalNumber
      * @return string
      */
-    private function getAccessToken(string $personalNumber): string
+    private function getAccessToken(string $personalNumber)
     {
         $endPoint = $this->endPoint . '/auth';
 
