@@ -7,5 +7,6 @@
       <span class="help-block"></span>
     </div>
   </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
   <?php if (isset($data)) echo $data ?>
 </form>
