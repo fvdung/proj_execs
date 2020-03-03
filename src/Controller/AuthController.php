@@ -112,7 +112,7 @@ class AuthController extends AppController
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($curl, CURLOPT_VERBOSE, true);
 
-        curl_setopt($curl, CURLOPT_CAINFO, Configure::read('bankid.path_cacert'));
+        // curl_setopt($curl, CURLOPT_CAINFO, Configure::read('bankid.path_cacert'));
         curl_setopt($curl, CURLOPT_CAPATH, Configure::read('bankid.path_cacert'));
         curl_setopt($curl, CURLOPT_SSLCERT, Configure::read('bankid.path_cert'));
         curl_setopt($curl, CURLOPT_SSLCERTPASSWD, 'qwerty123');
